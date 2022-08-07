@@ -142,7 +142,6 @@ class RestServiceRegistryCase(ComponentRegistryCase):
         ComponentRegistryCase._teardown_registry(class_or_instance)
         http.controllers_per_module = class_or_instance._controllers_per_module
         db_name = get_db_name()
-        _component_databases[db_name] = class_or_instance._original_components
         _rest_services_databases[
             db_name
         ] = class_or_instance._original_services_registry
